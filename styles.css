@@ -1,8 +1,8 @@
-/* CSS BY YOUR NAME */
+/* CSS BY YOUR Thomas Demma */
 
 /* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
-
+/* IMPORT "INTER" FROM GOOGLE FONTS" */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jacquard+12&family=Sarpanch:wght@400;500;600;700;800;900&display=swap');
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
@@ -35,6 +35,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    font-family:"Inter", sans-serif;;
 }
 ol, ul {
     list-style: none;
@@ -67,14 +68,80 @@ table {
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
+body{
+    width: 100%;
+}
+p{
+    line-height: 1.3;
+    font-weight: normal;
+}
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
+header{
+    background-color: var(--black);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    box-shadow: 5px 10px 8px 10px var(--blue);
+    overflow: visible;
+    z-index: 2;
+}
+header h1{
+    color: var(--blue);
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 10px;
+    align-self: center;
+}
+header h2{
+    display: none;
+}
+nav{
+    color: var(--blue);
+    text-align: right;
+    align-content: center;
+
+}
+input[type="checkbox"]{
+    opacity: 0;
+}
+input[type='checkbox']:not(:checked)+ul {
+    display: none;
+}
+nav label {
+    color: var(--white);
+    font-size: 3rem;
+    padding: 10px;
+    align-self: center;
+}
+
+nav ul{
+    list-style: none;
+    text-align: right;
+    width: 100%;
+}
+nav li a{
+    display: block;
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.5s;
+
+}
+nav a:hover {
+    color: var(--black);
+    background-color: var(--blue);
+}
+
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
+#Innovationandinvestment {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
@@ -82,18 +149,236 @@ table {
     text-align: center;
     padding: 1rem;
     overflow: hidden;
+    z-index: 1;
+}
+#Innovationandinvestment div{
+    color: var(--white);
+    display: block;
+    backdrop-filter: blur(8px);
+}
+
+
+#Innovationandinvestment div h2{
+    padding:20px;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeIndown 1s 0.5s;
+}
+
+
+#Innovationandinvestment div p{
+    padding:20px;
+    font-size: 1rem;
+}
+@keyframes fadeIndown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Start slightly below its final position */
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0); /* End at its final position */
+      }
+}
+#Innovationandinvestment button{
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 10px;
+    border-style: none;
+    transition: transform 0.5s ease;
+    animation: fadeIndown 1s 0.5s;
+    
+}
+#Innovationandinvestment button:hover{
+    background-color: var(--red);
+    transform: scale(1.3);
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
-    content: "";
-
+h1::before{
+    content: '';
+    display: inline-flex;
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
 
 }
+
+#Ourexpertise div{
+    padding: 10px;
+    padding-bottom: 20px;
+}
+#Ourexpertise div h2{
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeIndown 1s 0.5s;
+}
+#Ourexpertise div p{
+    font-size: 1rem;
+}
+
+#Whatweoffer div h2{
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeIndown 1s 0.5s;
+}
+
+#Whatweoffer div div{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    padding-bottom: 100px;
+}
+
+#Whatweoffer div div div{
+    padding:20px;
+    background-color: var(--blue);
+    color: var(--white);
+    height: auto;
+    border-radius: 10px;
+    
+}
+#Whatweoffer div div div:hover{
+    translate: -0px -10px;
+    
+}
+
+#Whatweoffer div div div h3{
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+#results{
+    background-color: var(--blue);
+    color: var(--white);
+    padding-bottom: 40px;
+}
+
+#results div{
+    padding: 20px;
+}
+#results div h2{
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#results div h3{
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#profitgrid{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+}
+
+#profitgrid h3{
+    animation: fadeIndown 1s 0.5s;
+}
+#profitgrid div{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#profitgrid div table{
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: var(--charcoal);
+    border-collapse: collapse;
+}
+#profitgrid th:nth-child(1){
+    width: 10%;
+}
+#profitgrid div table th, #profitgrid div table td {
+    padding: 20px;
+    border: 2px solid var(--charcoal);
+}
+
+#profitgrid div table tr:nth-child(even),#profitgrid div table tr:nth-child(1){
+    background-color: var(--black);
+}
+
+#contact{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#contact h2{
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeIndown 1s 0.5s;
+}
+
+#contact p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+form {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding-bottom: 20px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid var(--blue);
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 10px;
+    animation: fadeIndown 1s 0.5s;
+    transition: transform 0.5s ease;
+
+}
+input[type=submit]:hover{
+    background-color: var(--red);
+    transform: scale(1.2);
+
+}
+
+
+
+textarea{
+    width: 100%;
+    height: 100px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: grid;
+    border: 3px solid var(--blue);
+    box-sizing: border-box;
+}
+
+footer{
+    background-color: var(--black);
+    padding: 20px;
+    text-align: center;
+    color: var(--white);
+}
+
+footer a{
+    color: var(--blue);
+}
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -113,7 +398,7 @@ table {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height 0.5s;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -142,7 +427,7 @@ table {
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
-
+@media screen and (min-width:800px){
     #results {
         grid-template-columns: 1fr 1fr;
     }
@@ -156,6 +441,35 @@ table {
     .bar-chart {
         width: 50%;
     }
+    #Whatweoffer div div{
+        grid-template-columns: 1fr 1fr;
+    }
+    #profitgrid{
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    }
 
-
+}
 /* MEDIA QUERIES (LARGE) */
+@media screen and (min-width:800px) {
+    #results {
+        grid-template-columns: 1fr 1fr;
+    }
+    .results-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .results-table {
+        width: 50%;
+    }
+    .bar-chart {
+        width: 50%;
+    }
+    #Whatweoffer div div{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #profitgrid{
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    }
+}
